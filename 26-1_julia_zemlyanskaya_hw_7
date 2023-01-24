@@ -1,0 +1,57 @@
+def binary_search(element, lst):
+    left = 0
+    right = len(lst) - 1
+    while left <= right:
+        middle = (left + right) // 2
+        if lst[middle] == element:
+            print(f'Element {element} found at index {middle}')
+            return middle
+        elif lst[middle] > element:
+            right = middle - 1
+        else:
+            left = middle + 1
+    print(f'Element {element} not found in the list')
+
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+element = 5
+binary_search(element, lst)
+def bubble_sort(lst):
+    for i in range(len(lst) - 1):
+        for j in range(len(lst) - 1 - i):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+    return lst
+
+lst = [5,3,8,6,2,9,1,7,4]
+print(bubble_sort(lst))
+def selection_sort(lst):
+    for i in range(len(lst)):
+        min_indx = i
+        for j in range(i+1, len(lst)):
+            if lst[min_indx] > lst[j]:
+                min_indx = j
+        lst[i], lst[min_indx] = lst[min_indx], lst[i]
+    return lst
+
+lst = [5,3,8,6,2,9,1,7,4]
+print(selection_sort(lst))
+def bubble_sort(lst):
+    for i in range(len(lst) - 1):
+        for j in range(len(lst) - 1 - i):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+    return lst
+
+lst = [5,3,8,6,2,9,1,7,4]
+print(bubble_sort(lst))
+def selection_sort(lst):
+    for i in range(len(lst)):
+        min_indx = i
+        for j in range(i+1, len(lst)):
+            if lst[min_indx] > lst[j]:
+                min_indx = j
+        lst[i], lst[min_indx] = lst[min_indx], lst[i]
+    return lst
+
+lst = [5,3,8,6,2,9,1,7,4]
+print(selection_sort(lst))
